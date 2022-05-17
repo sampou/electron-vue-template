@@ -4,7 +4,7 @@
   "description": "electron + vue + template 快速开发",
   "main": "./app/main.js",
   "scripts": {
-    "start": "ts-node scripts/devServer.ts env=dev mode=development",
+    "dev": "ts-node scripts/devServer.ts env=dev mode=development",
     "build": "ts-node scripts/devServer.ts env=dev mode=production",
     "publish": "npm version patch && npm run build",
     "web-serve": "ts-node scripts/webServer.ts env=dev mode=development",
@@ -20,8 +20,15 @@
     "template",
     "webpack"
   ],
-  "author": "liting",
+  "author": "sampou@163.com <sampou@163.com>",
   "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "electron-updater": "^5.0.1",
+    "vue": "^3.2.33",
+    "vue-router": "^4.0.14",
+    "vuex": "^4.0.2"
+  },
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
@@ -41,11 +48,12 @@
     "core-js": "^2.6.11",
     "css-loader": "^5.0.0",
     "del": "^6.0.0",
-    "electron": "^18.2.0",
+    "electron": "18.2.0",
     "electron-builder": "^23.0.3",
     "electron-dev-webpack-plugin": "^1.0.5",
     "electron-packager": "^15.5.1",
     "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-html": "^6.2.0",
@@ -81,19 +89,10 @@
     "webpack-merge": "^5.7.3",
     "ws": "^7.4.1"
   },
-  "dependencies": {
-    "axios": "^0.27.2",
-    "electron-updater": "^5.0.1",
-    "vue": "^3.2.33",
-    "vue-router": "^4.0.14",
-    "vuex": "^4.0.2"
-  },
-  "publish": [
-    {
-      "provider": "generic",
-      "url": "http://localhost"
-    }
-  ],
+  "publish": [{
+    "provider": "generic",
+    "url": "http://localhost"
+  }],
   "build": {
     "asar": true,
     "productName": "electron-vue",
@@ -118,14 +117,12 @@
     },
     "win": {
       "icon": "./src/static/img/icon.jpg",
-      "target": [
-        {
-          "target": "nsis",
-          "arch": [
-            "x64"
-          ]
-        }
-      ],
+      "target": [{
+        "target": "nsis",
+        "arch": [
+          "x64"
+        ]
+      }],
       "artifactName": "${productName} ${version}.${ext}"
     },
     "nsis": {
