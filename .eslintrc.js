@@ -13,7 +13,7 @@ module.exports = {
         ecmaVersion: 2021,
         parser: '@typescript-eslint/parser',
     },
-    plugins: ['@typescript-eslint', 'vue', 'html'],
+    plugins: ['@typescript-eslint', 'prettier', 'vue', 'html'],
     settings: {
         'import/resolver': {
             node: {
@@ -31,6 +31,7 @@ module.exports = {
         Electron: 'readonly',
     },
     rules: {
+        indent: ['error', 4],
         'spaced-comment': ['error', 'always'],
         'no-tabs': 'off',
         'vue/comment-directive': 'off',

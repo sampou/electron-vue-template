@@ -1,6 +1,6 @@
-import { test } from '../utils/index.js';
+import { test } from '../utils/index.js'
 
 window.onload = () => {
-  test();
-  console.log('this is update file');
-};
+    test()
+    console.log('this is update file')
+}

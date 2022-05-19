@@ -15,7 +15,8 @@
       "@/*": ["src/*"],
       "@render/*": ["src/renderer/*"],
       "@main/*": ["src/main/*"]
-    }
+    },
+    "alwaysStrict": true
   },
   "ts-node": {
     "compilerOptions": {

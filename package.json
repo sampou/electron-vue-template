@@ -1,142 +1,144 @@
 {
-  "name": "electron-vue-template",
-  "version": "2.0.9",
-  "description": "electron + vue + template 快速开发",
-  "main": "./app/main.js",
-  "scripts": {
-    "dev": "ts-node scripts/devServer.ts env=dev mode=development",
-    "build": "ts-node scripts/devServer.ts env=dev mode=production",
-    "publish": "npm version patch && npm run build",
-    "web-serve": "ts-node scripts/webServer.ts env=dev mode=development",
-    "web-build": "ts-node scripts/webServer.ts env=dev mode=production",
-    "packager-build": "ts-node scripts/packagerBuild.ts env=dev mode=production && electron-packager ./ electron-vue --win --out ./pack --overwrite --no-prune",
-    "lint": "eslint src --ext .js,.ts,.tsx,.jsx,.vue --cache",
-    "lint-fix": "eslint src --ext .js,.ts,.tsx,.jsx,.vue --cache --fix",
-    "test": "ts-node ./scripts/test.ts"
-  },
-  "keywords": [
-    "Electron",
-    "Vue",
-    "template",
-    "webpack"
-  ],
-  "author": "sampou@163.com <sampou@163.com>",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^0.27.2",
-    "electron-updater": "^5.0.1",
-    "vue": "^3.2.33",
-    "vue-router": "^4.0.14",
-    "vuex": "^4.0.2"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.12.3",
-    "@babel/plugin-proposal-class-properties": "^7.12.1",
-    "@babel/plugin-transform-runtime": "^7.12.1",
-    "@babel/preset-env": "^7.12.1",
-    "@types/node": "^17.0.30",
-    "@types/sql.js": "^1.4.3",
-    "@types/webpack": "^5.28.0",
-    "@typescript-eslint/eslint-plugin": "^5.21.0",
-    "@typescript-eslint/parser": "^5.21.0",
-    "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.1.0",
-    "babel-plugin-import": "^1.13.3",
-    "chalk": "^4.1.0",
-    "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^6.4.1",
-    "core-js": "^2.6.11",
-    "css-loader": "^5.0.0",
-    "del": "^6.0.0",
-    "electron": "18.2.0",
-    "electron-builder": "^23.0.3",
-    "electron-dev-webpack-plugin": "^1.0.5",
-    "electron-packager": "^15.5.1",
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-html": "^6.2.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-promise": "^5.2.0",
-    "eslint-plugin-standard": "^5.0.0",
-    "eslint-plugin-vue": "^8.7.1",
-    "eslint-webpack-plugin": "^3.1.1",
-    "file-loader": "^6.2.0",
-    "fork-ts-checker-webpack-plugin": "^7.2.11",
-    "html-webpack-plugin": "^5.5.0",
-    "mini-css-extract-plugin": "^1.1.2",
-    "node-loader": "^1.0.2",
-    "prettier": "^2.6.2",
-    "sass": "^1.51.0",
-    "sass-loader": "^10.0.4",
-    "sql.js": "^1.6.2",
-    "style-loader": "^2.0.0",
-    "ts-loader": "^9.2.9",
-    "ts-node": "^10.7.0",
-    "typescript": "^4.6.4",
-    "url-loader": "^4.1.1",
-    "uuid": "^8.3.2",
-    "vue-loader": "^17.0.0",
-    "vue-style-loader": "^4.1.2",
-    "vue-template-compiler": "^2.6.14",
-    "webpack": "^5.72.0",
-    "webpack-bundle-analyzer": "^4.3.0",
-    "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.8.1",
-    "webpack-merge": "^5.7.3",
-    "ws": "^7.4.1"
-  },
-  "publish": [{
-    "provider": "generic",
-    "url": "http://localhost"
-  }],
-  "build": {
-    "asar": true,
-    "productName": "electron-vue",
-    "appId": "com.mutou.app",
-    "copyright": "Copyright © year motou",
-    "directories": {
-      "output": "pack"
+    "name": "electron-vue-template",
+    "version": "2.0.9",
+    "description": "electron + vue + template 快速开发",
+    "main": "./app/main.js",
+    "scripts": {
+        "dev": "ts-node scripts/devServer.ts env=dev mode=development",
+        "build": "ts-node scripts/devServer.ts env=dev mode=production",
+        "publish": "npm version patch && npm run build",
+        "web-serve": "ts-node scripts/webServer.ts env=dev mode=development",
+        "web-build": "ts-node scripts/webServer.ts env=dev mode=production",
+        "packager-build": "ts-node scripts/packagerBuild.ts env=dev mode=production && electron-packager ./ electron-vue --win --out ./pack --overwrite --no-prune",
+        "lint": "eslint src --ext .js,.ts,.tsx,.jsx,.vue --cache",
+        "lint:fix": "eslint src --ext .js,.ts,.tsx,.jsx,.vue --cache --fix",
+        "test": "ts-node ./scripts/test.ts"
     },
-    "files": [
-      "app/**"
+    "keywords": [
+        "Electron",
+        "Vue",
+        "template",
+        "webpack"
     ],
-    "mac": {
-      "identity": "com.mutou.app",
-      "target": [
-        "dmg"
-      ],
-      "artifactName": "${productName}.${ext}"
+    "author": "sampou@163.com <sampou@163.com>",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.27.2",
+        "electron-updater": "^5.0.1",
+        "vue": "^3.2.33",
+        "vue-router": "^4.0.14",
+        "vuex": "^4.0.2",
+        "ant-design-vue": "^3.2.3"
     },
-    "dmg": {
-      "title": "${productName}",
-      "artifactName": "${productName} ${version}.${ext}"
+    "devDependencies": {
+        "@babel/core": "^7.12.3",
+        "@babel/plugin-proposal-class-properties": "^7.12.1",
+        "@babel/plugin-transform-runtime": "^7.12.1",
+        "@babel/preset-env": "^7.12.1",
+        "@babel/preset-stage-0": "^7.8.3",
+        "@types/node": "^17.0.30",
+        "@types/sql.js": "^1.4.3",
+        "@types/webpack": "^5.28.0",
+        "@typescript-eslint/eslint-plugin": "^5.21.0",
+        "@typescript-eslint/parser": "^5.21.0",
+        "babel-eslint": "^10.1.0",
+        "babel-loader": "^8.1.0",
+        "babel-plugin-import": "^1.13.3",
+        "chalk": "^4.1.0",
+        "clean-webpack-plugin": "^3.0.0",
+        "copy-webpack-plugin": "^6.4.1",
+        "core-js": "^2.6.11",
+        "css-loader": "^5.0.0",
+        "del": "^6.0.0",
+        "electron": "18.2.0",
+        "electron-builder": "^23.0.3",
+        "electron-dev-webpack-plugin": "^1.0.5",
+        "electron-packager": "^15.5.1",
+        "eslint": "7.32.0",
+        "eslint-config-airbnb-base": "^14.2.1",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-config-standard": "^16.0.3",
+        "eslint-plugin-html": "^6.2.0",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "eslint-plugin-promise": "^5.2.0",
+        "eslint-plugin-standard": "^5.0.0",
+        "eslint-plugin-vue": "^8.7.1",
+        "eslint-webpack-plugin": "^3.1.1",
+        "file-loader": "^6.2.0",
+        "fork-ts-checker-webpack-plugin": "^7.2.11",
+        "html-webpack-plugin": "^5.5.0",
+        "mini-css-extract-plugin": "^1.1.2",
+        "node-loader": "^1.0.2",
+        "prettier": "2.6.2",
+        "sass": "^1.51.0",
+        "sass-loader": "^10.0.4",
+        "sql.js": "^1.6.2",
+        "style-loader": "^2.0.0",
+        "ts-loader": "^9.2.9",
+        "ts-node": "^10.7.0",
+        "typescript": "^4.6.4",
+        "url-loader": "^4.1.1",
+        "uuid": "^8.3.2",
+        "vue-loader": "^17.0.0",
+        "vue-style-loader": "^4.1.2",
+        "vue-template-compiler": "^2.6.14",
+        "webpack": "^5.72.0",
+        "webpack-bundle-analyzer": "^4.3.0",
+        "webpack-cli": "^4.9.2",
+        "webpack-dev-server": "^4.8.1",
+        "webpack-merge": "^5.7.3",
+        "ws": "^7.4.1"
     },
-    "win": {
-      "icon": "./src/static/img/icon.jpg",
-      "target": [{
-        "target": "nsis",
-        "arch": [
-          "x64"
-        ]
-      }],
-      "artifactName": "${productName} ${version}.${ext}"
-    },
-    "nsis": {
-      "oneClick": false,
-      "perMachine": true,
-      "runAfterFinish": true,
-      "allowElevation": true,
-      "createDesktopShortcut": "always",
-      "createStartMenuShortcut": true,
-      "allowToChangeInstallationDirectory": true,
-      "deleteAppDataOnUninstall": true,
-      "artifactName": "${productName} ${version}.${ext}",
-      "shortcutName": "木头人",
-      "guid": "com.mutou.app"
+    "publish": [{
+        "provider": "generic",
+        "url": "http://localhost"
+    }],
+    "build": {
+        "asar": true,
+        "productName": "electron-vue",
+        "appId": "com.mutou.app",
+        "copyright": "Copyright © year motou",
+        "directories": {
+            "output": "pack"
+        },
+        "files": [
+            "app/**"
+        ],
+        "mac": {
+            "identity": "com.mutou.app",
+            "target": [
+                "dmg"
+            ],
+            "artifactName": "${productName}.${ext}"
+        },
+        "dmg": {
+            "title": "${productName}",
+            "artifactName": "${productName} ${version}.${ext}"
+        },
+        "win": {
+            "icon": "./src/static/img/icon.jpg",
+            "target": [{
+                "target": "nsis",
+                "arch": [
+                    "x64"
+                ]
+            }],
+            "artifactName": "${productName} ${version}.${ext}"
+        },
+        "nsis": {
+            "oneClick": false,
+            "perMachine": true,
+            "runAfterFinish": true,
+            "allowElevation": true,
+            "createDesktopShortcut": "always",
+            "createStartMenuShortcut": true,
+            "allowToChangeInstallationDirectory": true,
+            "deleteAppDataOnUninstall": true,
+            "artifactName": "${productName} ${version}.${ext}",
+            "shortcutName": "木头人",
+            "guid": "com.mutou.app"
+        }
     }
-  }
 }
